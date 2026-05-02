@@ -1,0 +1,123 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0b0b0b;
+color:white;
+}
+
+/* NAV */
+.navbar{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:black;
+position:fixed;
+width:100%;
+z-index:100;
+}
+
+/* HERO */
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:120px;
+}
+
+/* TEXT */
+.left h1{
+font-size:45px;
+}
+
+.tagline{
+color:orange;
+margin:10px 0;
+}
+
+/* SOCIAL */
+.social{
+margin-top:15px;
+}
+
+.social a{
+margin-right:10px;
+padding:10px;
+background:#111;
+border-radius:50%;
+color:white;
+}
+
+.social a:hover{
+background:orange;
+color:black;
+}
+
+/* SECTION */
+.section{
+padding:80px 20px;
+text-align:center;
+opacity:0;
+transform:translateY(50px);
+transition:0.8s;
+}
+
+.section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* SKILLS */
+.skills{
+display:flex;
+gap:40px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.skills div{
+background:#111;
+padding:25px;
+border-radius:12px;
+width:300px;
+}
+
+/* GRID */
+.grid{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+/* CARD */
+.card{
+background:#111;
+padding:25px;
+border-radius:12px;
+width:280px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+/* BUTTON */
+.card a{
+margin-top:15px;
+padding:10px 20px;
+background:orange;
+color:black;
+border-radius:20px;
+text-decoration:none;
+}
+
+/* EDUCATION */
+.highlight{
+color:orange;
+font-size:18px;
+font-weight:600;
+}

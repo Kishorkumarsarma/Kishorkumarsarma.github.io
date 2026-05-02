@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kishor Kumar Sarma | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root { --primary: #ffa500; --bg: #0b0b0b; --card: #161616; --text: #ccc; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body { background: var(--bg); color: white; line-height: 1.6; }
+
+        /* Navigation */
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 15px 8%; position: fixed; width: 100%; background: rgba(0,0,0,0.95); z-index: 1000; border-bottom: 1px solid #222; }
+        .logo { font-size: 22px; font-weight: 700; color: var(--primary); }
+        .menu a { margin-left: 20px; color: var(--text); text-decoration: none; font-size: 14px; transition: 0.3s; }
+        .menu a:hover { color: var(--primary); }
+
+        /* Hero Section */
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: space-between; padding: 100px 8%; background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80"); background-size: cover; }
+        .left h4 { font-weight: 300; color: #fff; }
+        .left h1 { font-size: clamp(35px, 5vw, 55px); margin: 5px 0; color: #fff; }
+        .tagline { color: var(--primary); font-size: clamp(18px, 2vw, 22px); font-weight: 600; margin: 15px 0; }
+        .contact-top { margin: 15px 0; font-size: 15px; color: #eee; }
+        .btn { padding: 12px 30px; background: var(--primary); border-radius: 30px; color: black; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 25px; transition: 0.3s; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(255, 165, 0, 0.3); }
+        .right img { width: 350px; border-radius: 20px; border: 3px solid var(--primary); box-shadow: 0 0 20px rgba(255, 165, 0, 0.1); }
+
+        /* Section Styling */
+        .section { padding: 90px 8%; opacity: 0; transform: translateY(30px); transition: 1s ease; }
+        .section.show { opacity: 1; transform: translateY(0); }
+        h2 { text-align: center; font-size: 32px; margin-bottom: 40px; color: #fff; }
+        h2::after { content: ''; display: block; width: 60px; height: 3px; background: var(--primary); margin: 10px auto; }
+
+        /* Cards & Grid */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .card { background: var(--card); padding: 30px; border-radius: 15px; border: 1px solid #222; transition: 0.3s; height: 100%; }
+        .card:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .card h3 { color: var(--primary); margin-bottom: 15px; font-size: 20px; }
+        .card p { font-size: 14.5px; color: var(--text); margin-bottom: 8px; }
+        .card strong { color: #fff; }
+        .date-tag { display: block; color: var(--primary); font-weight: 600; margin-bottom: 10px; font-size: 13px; }
+
+        @media (max-width: 900px) {
+            .hero { flex-direction: column; text-align: center; padding-top: 150px; }
+            .menu { display: none; }
+            .right img { width: 280px; margin-top: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">Kishor</div>
+    <div class="menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<<section id="home" class="hero">
+    <div class="left">
+        <h4>Hey, I am</h4>
+        <h1>Kishor Kumar Sarma</h1>
+        <p class="tagline">IT Support Engineer | Electrical Engineer | Data Analyst</p>
+
+        <div class="contact-top">
+            <p>📧 itkishorsharma@gmail.com</p>
+            <p>📞 +91-7002025354</p>
+            <p>📍 Guwahati, Assam</p>
+        </div>
+
+        <!-- Buttons -->
+        <a href="#contact" class="btn">Hire Me</a>
+
+        <!-- Social Links -->
+        <div style="margin-top: 20px;">
+            <a href="https://linkedin.com/in/yourusername" target="_blank" class="btn" style="margin-right:10px;">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+
+            <a href="https://wa.me/917002025354" target="_blank" class="btn" style="margin-right:10px;">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+
+            <a href="https://github.com/Kishorkumarsarma" target="_blank" class="btn">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </div>
+
+    <div class="right">
+        <img src="profile.png" alt="Kishor Profile">
+    </div>
+</section>
+
+<section id="about" class="section">
+    <h2>About Me</h2>
+    <div style="max-width: 850px; margin: auto; background: var(--card); padding: 40px; border-radius: 20px; border-left: 5px solid var(--primary);">
+        <p style="margin-bottom:20px;">IT Support Engineer with hands-on experience in desktop troubleshooting, network setup, and system maintenance. Skilled in resolving L1 and L2 issues, configuring LAN/WAN networks, and supporting Windows and Linux systems.</p>
+        <p style="margin-bottom:20px;">With a background in Information Technology and Electrical Engineering, I combine hardware and software knowledge with data analysis skills using Python, SQL, and Power BI.</p>
+        <p>Focused on problem-solving and efficiency, I aim to reduce downtime and deliver reliable IT support in fast-paced environments.</p>
+    </div>
+</section>
+
+<section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>💻 IT Support</h3>
+            <p>Desktop Support L1 & L2</p>
+            <p>Hardware Troubleshooting</p>
+            <p>LAN & WAN Networking</p>
+            <p>Router & Switch Configuration</p>
+            <p>PoE Setup, Cat6 Cabling</p>
+            <p>Windows & Linux</p>
+            <p>Active Directory (Basic)</p>
+            <p>DHCP, DNS, VPN</p>
+            <p>Outlook Troubleshooting</p>
+            <p>Remote Desktop, AnyDesk</p>
+        </div>
+        <div class="card">
+            <h3>📊 Data Analysis</h3>
+            <p>Data Cleaning & Preparation</p>
+            <p>Python (Pandas, NumPy)</p>
+            <p>SQL</p>
+            <p>Power BI</p>
+            <p>Data Visualization</p>
+            <p>Reporting & Insights</p>
+        </div>
+        <div class="card">
+            <h3>⚡ Electrical</h3>
+            <p>Troubleshooting & Fault Detection</p>
+            <p>Circuit Troubleshooting</p>
+            <p>Electrical Panel Wiring & Installation</p>
+            <p>Industrial Electrical Systems Basics</p>
+            <p>Maintenance & Testing of Electrical Components</p>
+            <p>Use of Multimeter & Basic Testing Equipment</p>
+            <p>Wiring & Installation</p>
+            <p>Electrical Safety Standards Compliance</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Amazon Sales Analysis</h3>
+            <p><p>
+Conducted comprehensive Amazon sales data analysis using Python (Pandas, NumPy) and SQL. Explored large datasets to identify sales trends, customer behavior, and high-performing products. Developed data-driven insights and visualizations that help optimize business strategies and improve overall performance.
+</p>.</p>
+            <a href="https://github.com/Kishorkumarsarma/Amazon_Sales_Analysis" target="_blank" class="btn" style="padding: 8px 20px; font-size: 13px;">View Project</a>
+        </div>
+        <div class="card">
+            <h3>Power BI Dashboard</h3>
+            <p><p>
+Built dynamic and interactive dashboards using Power BI to analyze and visualize business data. Developed KPI reports, trend analysis, and data visualizations to support strategic decision-making and improve performance tracking.
+</p>.</p>
+            <a href="https://github.com/Kishorkumarsarma" target="_blank" class="btn" style="padding: 8px 20px; font-size: 13px;">View Project</a>
+        </div>
+        <div class="card">
+            <h3>IT Support Work</h3>
+            <p><p>
+Handled real-time IT support operations including L1 and L2 troubleshooting for hardware, software, and network-related issues. Configured systems, supported end-users, and ensured system reliability and reduced downtime through efficient problem-solving.
+</p></p>
+        </div>
+    </div>
+</section>
+
+<section id="education" class="section">
+    <h2>Education</h2>
+    <div class="grid">
+        <div class="card">
+            <span class="date-tag">2021 – 2024</span>
+            <h3>B.Sc. in Information Technology</h3>
+            <p>Built a strong foundation in software development, database management, and web technologies.</p>
+            <p><strong>Technologies:</strong> Python, Java, C++, C#, JavaScript, HTML, CSS, SQL, MySQL</p>
+            <p><strong>Result:</strong> CGPA: 7.2</p>
+        </div>
+        <div class="card">
+            <span class="date-tag">2018 – 2021</span>
+            <h3>Diploma in Electrical Engineering</h3>
+            <p>Developed practical skills in electrical systems, troubleshooting, and maintenance with real-world applications.</p>
+            <p><strong>Core Skills:</strong> Troubleshooting & Fault Detection, Electrical Panel Wiring, Maintenance & Testing of Components, Testing Equipment (Oscilloscope, Multimeter), Safety Standards Compliance</p>
+            <p><strong>Result:</strong> 74%</p>
+        </div>
+    </div>
+</section>
+
+<section id="certifications" class="section">
+    <h2>Certifications & Internship</h2>
+    <div class="grid">
+        <div class="card">
+            <span class="date-tag">10 Feb 2025 – 10 May 2025</span>
+            <h3>Data Analyst Intern</h3>
+            <p><strong>Labmentix Pvt. Ltd</strong></p>
+            <p>Duration: 3 Months</p>
+            <a href="certificate.pdf" target="_blank" class="btn" style="padding: 8px 20px; font-size: 13px;">View Certificate</a>
+        </div>
+        <div class="card">
+            <h3>Data Science & AI</h3>
+            <p>Python, Machine Learning, Data Analysis</p>
+        </div>
+        <div class="card">
+            <h3>Hardware & Networking</h3>
+            <p>System troubleshooting, networking, installation</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section" style="text-align: center;">
+    <h2>Contact</h2>
+    <p>Email: <strong>itkishorsharma@gmail.com</strong></p>
+    <p>Phone: <strong>+91-7002025354</strong></p>
+</section>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add("show"); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll(".section").forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
